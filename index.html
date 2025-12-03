@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adult Income Prediction – Capstone Project | Jyothipriya Ramavath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f7;
+      color: #222;
+    }
+    header {
+      background: #1f2933;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto 40px;
+      background: #ffffff;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    h2 {
+      margin-top: 0;
+      color: #1f2933;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .tag {
+      display: inline-block;
+      background: #e5efff;
+      color: #1a56db;
+      padding: 3px 8px;
+      margin: 2px 3px 5px 0;
+      border-radius: 999px;
+      font-size: 11px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #555;
+    }
+    a {
+      color: #1a56db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight-box {
+      border-left: 4px solid #1a56db;
+      padding-left: 12px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Adult Income Prediction – Capstone Project</h1>
+  <p>By: <strong>Jyothipriya Ramavath</strong> | Master’s in Computer Information Systems, Christian Brothers University</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Project Overview</h2>
+    <p>
+      This capstone project predicts whether an individual earns more than $50K annually using the UCI Adult Census dataset.
+      It demonstrates a complete end-to-end machine learning pipeline: data cleaning, exploratory data analysis, model
+      development, evaluation, and deployment via FastAPI.
+    </p>
+    <div class="highlight-box">
+      <strong>Goal:</strong> Build and deploy a production-style ML model that can serve real-time predictions through an API.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Tech Stack & Tools</h2>
+    <span class="tag">Python</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">Matplotlib</span>
+    <span class="tag">Scikit-Learn</span>
+    <span class="tag">FastAPI</span>
+    <span class="tag">Joblib</span>
+    <span class="tag">Postman</span>
+    <span class="tag">VS Code</span>
+    <span class="tag">GitHub</span>
+  </div>
+
+  <div class="section">
+    <h2>Pipeline Steps</h2>
+    <ol>
+      <li><strong>Data Preparation:</strong> Loaded raw <code>adult.data</code>, applied official UCI column names, handled missing values, and encoded the target (<=50K vs &gt;50K).</li>
+      <li><strong>Exploratory Data Analysis:</strong> Visualized age, hours worked, income distribution, and relationships between income and education, sex, and marital status.</li>
+      <li><strong>Modeling:</strong> Built both Logistic Regression (baseline) and Random Forest models using a unified preprocessing pipeline (StandardScaler + OneHotEncoder).</li>
+      <li><strong>Evaluation:</strong> Compared models using Accuracy and F1 Score; Random Forest achieved the best performance.</li>
+      <li><strong>Deployment:</strong> Exposed the trained model via a FastAPI endpoint (<code>/predict</code>) and validated it using Postman with JSON payloads.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Key Learnings</h2>
+    <ul>
+      <li>How to build a full ML workflow from raw data to deployed API.</li>
+      <li>Practical experience with feature engineering, encoding, and model selection.</li>
+      <li>Designing REST APIs with FastAPI and validating with Pydantic models.</li>
+      <li>Testing ML services using Postman and structuring a project for GitHub.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>GitHub Repository</h2>
+    <p>
+      View the full source code, notebooks, and FastAPI app on GitHub:<br />
+      <a href="https://github.com/jyothipriya06/adult-income-project" target="_blank">
+        https://github.com/jyothipriya06/adult-income-project
+      </a>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:jyothipriyarathod1999@gmail.com">jyothipriyarathod1999@gmail.com</a><br />
+      Location: Memphis, TN<br />
+      LinkedIn: <a href="https://www.linkedin.com/in/jyothi-r-395470253/" target="_blank">https://www.linkedin.com/in/jyothi-r-395470253/</a>
+    </p>
+  </div>
+
+</div>
+
+<div class="footer">
+  © <span id="year"></span> Jyothipriya Ramavath. All rights reserved.
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
